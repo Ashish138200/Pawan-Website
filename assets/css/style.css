@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+
+}
+:root{
+    --amber-colour:#FFBF00;
+    --peach-colour:rgb(255, 229, 180);
+    --p-text-colour:#ddd;
+    --head-text-colour:#ddd;
+}
+/*ScrollBars*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: papayawhip;
+    border-radius:1rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--amber-colour);
+    border-radius:1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: orange;
+}
+body{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+.body-container{
+    background:linear-gradient(to bottom,rgb(255, 229, 180),white);
+    height:100vh;
+    width:99.4vw;
+}
+.head-colour{
+    color: orange;
+}
+.p-colour{
+    color: gray;
+}
+.sticky-navbar{
+    position:sticky;
+    top:0;
+    right:0;
+    background:linear-gradient(to left,white,rgb(255, 229, 180),var(--amber-colour));
+    width:98vw;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2rem;
+
+}
+.sticky-navbar div span{
+    color: orangered;
+}
+.navbar{
+    position: sticky;
+    z-index: 10;
+}
+.mr-5{
+    border-radius:0.5rem;
+    background-color: rgba(255, 255, 255, .10);
+    backdrop-filter: blur(5px);
+    padding:0.4rem 0.6rem;
+}
+.is-selected{
+    color:orangered;
+    background-color: rgba(255, 255, 255, .20);
+    backdrop-filter: blur(20px);
+}
+.mr-5:hover{
+    background-color: rgba(255, 255, 255, .20);
+    backdrop-filter: blur(20px);
+    color:orangered;
+}
+.uil{
+    padding-right: 0.5rem;
+    color:black; !important;
+}
+.logo{
+    height:auto;
+    width:6rem;
+}
+.show-bg{
+    position: relative;
+    height:78vh;
+    width:96vw;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background-color: rgba(255, 255, 255, .20);
+    backdrop-filter: blur(10px);
+    border-radius:1rem;
+    box-shadow: #FFBF00 -5px -5px 20px;
+}
+.showcase{
+    margin-top:-5rem;
+    position:absolute;
+    z-index:1;
+}
+.mySlides {display: none;}
+p {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: orange;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: orangered;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.footer-logo{
+    margin-left: 4rem;
+}
+.footer-colour{
+    background:linear-gradient(to top,rgb(255, 229, 180),white);
+    border-top: 1px solid orange;
+}
+.f-brand-colour{
+    color:orangered;
+    font-size: 0.95rem;
+}
+.footer-last{
+    background-color: rgba(255, 255, 255, .30);
+    backdrop-filter: blur(20px);
+}
+.marriage-reg-head{
+    font-size:2rem;
+    font-weight: bold;
+    text-align:center;
+}
+.marriage-reg-subhead{
+    text-align:center;
+}
+#myBtn{
+    cursor:pointer;
+}
+
+.services__icon{
+    display: block;
+    font-size: 1.5rem;
+    color: var(--amber-colour);
+    margin-bottom: 1rem;
+}
+.service__title{
+    margin-bottom: 1rem;
+}
+.services__button{
+    cursor: pointer;
+}
+.services__button:hover .button__icon{
+    transform: translateX(.25rem);
+}
+.services__modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+.services__modal-content{
+    position: relative;
+    background-color: white;
+    padding: 1.5rem;
+    width:50%;
+    border-radius: .5rem;
+}
+.services__modal-services{
+    row-gap: 1rem;
+}
+.services__modal-service{
+    display: flex;
+    margin: 0 2rem;
+}
+.services__modal-title{
+    margin-bottom: 1.5rem;
+}
+.services__modal-close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--amber-colour);
+    cursor: pointer;
+}
+.services__modal-icon{
+    color: var(--amber-colour);
+    margin-right: 0.25rem;
+}
+.services_btn{
+    margin-bottom: 2rem;
+}
+
+/* Active Modal */
+.active-modal{
+    opacity: 1;
+    visibility: visible;
+}
+.text-org{
+    color:var(--amber-colour);
+}
+.bg-org{
+    background: var(--peach-colour);
+    color: orangered;
+}
+.bg-org:hover {
+    background: var(--amber-colour);
+}
+@media screen and (min-width:1100px) {
+    .count-container {
+        padding: 0 8rem;
+    }
+}
+
+/* Image Carousel */
+.mySlides1 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container1 {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: orangered;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: var(--peach-colour);
+}
+
+
+/* The dots/bullets/indicators */
+.dot1 {
+  cursor: pointer;
+  height: 9px;
+  width: 9px;
+  margin: 0 2px;
+  background-color: var(--peach-colour);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot1:hover {
+  background-color: orangered;
+}
+
+/* Fading animation */
+.fade1 {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade1 {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade1 {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+@media screen and (max-width: 350px) {
+    .sticky-navbar div:nth-child(1) {
+        display:none;
+    }
+    .nav-items{
+        display:none;
+    }
+    .logo-min{
+        margin-left: -5rem;
+    }
+    .show-bg{
+        margin: 0 1rem;
+        overflow: hidden;
+    }
+    .services__modal{
+        padding: 0 .5rem;
+    }
+    .services__modal-content{
+        width:100%
+    }
+    .footer-logo{
+        margin-left:0;
+    }
+}
+/* For medium devices */
+@media screen and (max-width: 568px) {
+    .sticky-navbar div:nth-child(1), .hero-image {
+        display:none;
+    }
+    .mr-5{
+        padding:0
+    }
+    .show-bg{
+        margin: 0 1rem;
+    }
+    .services__modal{
+        padding: 0 .5rem;
+    }
+    .services__modal-content{
+        width:100%
+    }
+    .footer-logo{
+        margin-left:3rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .services__modal-content{
+        width: 450px;
+    }
+}
+/* For large devices */
+@media screen and (max-width: 1100px){
+    .show-bg{
+        height:50%
+    }
+    .count-container1{
+        margin-top:-30rem!important;
+    }
+    .footer-logo{
+        display:none;
+    }
+
+}
