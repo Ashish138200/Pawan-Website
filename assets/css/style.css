@@ -373,15 +373,20 @@ img {vertical-align: middle;}
 }
 /* For medium devices */
 @media screen and (min-width: 351px) and (max-width: 568px) {
-    .sticky-navbar div:nth-child(1), .hero-image {
-        display:none;
+    .sticky-navbar div {
+        font-size: 0.75rem;
     }
     .mr-5{
-        padding:0
+        padding:0;
+        flex-wrap: nowrap; !important;
+    }
+    .grid-serv{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
     .show-bg{
         margin: 0 1rem;
-        overflow:hidden;
+        overflow:scroll;
     }
     .services__modal{
         padding: 0 .5rem;
