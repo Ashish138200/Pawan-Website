@@ -35,7 +35,7 @@ body{
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    overflow-x: hidden;
+
 }
 .ad-container{
     display: flex;
@@ -43,6 +43,7 @@ body{
     justify-content:center;
     align-items:center;
     gap:0.5rem;
+    overflow-x: hidden;
 }
 .body-container{
     background:linear-gradient(to bottom,rgb(255, 229, 180),white);
