@@ -44,6 +44,7 @@ body{
     align-items:center;
     gap:0.5rem;
     overflow-x: hidden;
+
 }
 .body-container{
     background:linear-gradient(to bottom,rgb(255, 229, 180),white);
