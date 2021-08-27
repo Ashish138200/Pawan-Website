@@ -36,6 +36,10 @@ body{
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
+.ad-container{
+    display: flex;
+    flex-direction: row;
+}
 .body-container{
     background:linear-gradient(to bottom,rgb(255, 229, 180),white);
     height:100vh;
